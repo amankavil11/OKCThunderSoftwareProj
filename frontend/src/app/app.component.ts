@@ -33,12 +33,13 @@ export class AppComponent {
 
   setActiveTab(): void {
     switch (true) {
-      case this.router.url.includes('player-summary'):
-        this.currentTab = Tab.FRONTEND;
-        break;
       case this.router.url.includes('player-summary-api'):
         this.currentTab = Tab.BACKEND;
         break;
+      case this.router.url.includes('player-summary'):
+        this.currentTab = Tab.FRONTEND;
+        break;
+      
     }
   }
 

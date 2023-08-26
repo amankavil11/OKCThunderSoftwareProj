@@ -1,8 +1,33 @@
-player-summary-component {
-  .placeholder {
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+table {
+  width: 100%;
+}
+
+.mat-elevation-z8 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+
+mat-header-cell, mat-cell {
+  justify-content: left;
+}
+
+
+.left-text {
+  text-align: left;
+}
+
+
+.mat-column-GameStats {
+  text-align: right !important; 
+}
+
+.filter {
+  font-size: 14px;
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  
 }

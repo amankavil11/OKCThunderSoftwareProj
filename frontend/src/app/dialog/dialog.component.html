@@ -1,10 +1,101 @@
-<table mat-table [dataSource]="dataSource">
+<h2>Game Logs</h2>
+<mat-slide-toggle color="primary" [(ngModel)]="isChecked">{{((isChecked)) ? 'Switch To Game Stats' : 'Switch To Advanced Shooting Stats'}}</mat-slide-toggle>
+<div *ngIf="!isChecked">
+    <table mat-table [dataSource]="dataSource">
 
-    <ng-container matColumnDef="date">
-      <th mat-header-cell *matHeaderCellDef> Date </th>
-      <td mat-cell *matCellDef="let row"> {{row.date}} </td>
-    </ng-container>
+        <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef> Date </th>
+        <td mat-cell *matCellDef="let row"> {{row.date}} </td>
+        </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+        <ng-container matColumnDef="isStarter">
+            <th mat-header-cell *matHeaderCellDef> Starter Status </th>
+            <td mat-cell *matCellDef="let row"> {{((row.isStarter)) ? 'Yes' : 'No'}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="points">
+            <th mat-header-cell *matHeaderCellDef> Pts </th>
+            <td mat-cell *matCellDef="let row"> {{row.points}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="assists">
+            <th mat-header-cell *matHeaderCellDef> Ast </th>
+            <td mat-cell *matCellDef="let row"> {{row.assists}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="offensiveRebounds">
+            <th mat-header-cell *matHeaderCellDef> Off. Reb </th>
+            <td mat-cell *matCellDef="let row"> {{row.offensiveRebounds}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="defensiveRebounds">
+            <th mat-header-cell *matHeaderCellDef> Def. Reb </th>
+            <td mat-cell *matCellDef="let row"> {{row.defensiveRebounds}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="steals">
+            <th mat-header-cell *matHeaderCellDef> Stl </th>
+            <td mat-cell *matCellDef="let row"> {{row.steals}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="blocks">
+            <th mat-header-cell *matHeaderCellDef> Blk </th>
+            <td mat-cell *matCellDef="let row"> {{row.blocks}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="turnovers">
+            <th mat-header-cell *matHeaderCellDef> TO </th>
+            <td mat-cell *matCellDef="let row"> {{row.turnovers}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="defensiveFouls">
+            <th mat-header-cell *matHeaderCellDef> Def. Fouls </th>
+            <td mat-cell *matCellDef="let row"> {{row.defensiveFouls}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="offensiveFouls">
+            <th mat-header-cell *matHeaderCellDef> Off. Fouls </th>
+            <td mat-cell *matCellDef="let row"> {{row.offensiveFouls}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="freeThrowsMade">
+            <th mat-header-cell *matHeaderCellDef> FT Made </th>
+            <td mat-cell *matCellDef="let row"> {{row.freeThrowsMade}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="freeThrowsAttempted">
+            <th mat-header-cell *matHeaderCellDef> FT Attempts </th>
+            <td mat-cell *matCellDef="let row"> {{row.freeThrowsAttempted}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="twoPointersMade">
+            <th mat-header-cell *matHeaderCellDef> 2PT Made </th>
+            <td mat-cell *matCellDef="let row"> {{row.twoPointersMade}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="twoPointersAttempted">
+            <th mat-header-cell *matHeaderCellDef> 2PT Attempts </th>
+            <td mat-cell *matCellDef="let row"> {{row.twoPointersAttempted}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="threePointersMade">
+            <th mat-header-cell *matHeaderCellDef> 3PT Made </th>
+            <td mat-cell *matCellDef="let row"> {{row.threePointersMade}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="threePointersAttempted">
+            <th mat-header-cell *matHeaderCellDef> 3PT Attempts </th>
+            <td mat-cell *matCellDef="let row"> {{row.threePointersAttempted}} </td>
+        </ng-container>
+
+
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
+<div *ngIf="isChecked">
+    <p>this worked</p>
+
+</div>

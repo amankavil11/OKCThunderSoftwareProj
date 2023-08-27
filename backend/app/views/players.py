@@ -44,9 +44,9 @@ class PlayerSummary(APIView):
             game_dict['freeThrowsMade'] = game.freeThrowsMade
             game_dict['freeThrowsAttempted'] = game.freeThrowsAttempted
             game_dict['twoPointersMade'] = game.twoPointersMade
-            game_dict['twoThrowsAttempted'] = game.twoPointersAttempted
+            game_dict['twoPointersAttempted'] = game.twoPointersAttempted
             game_dict['threePointersMade'] = game.threePointersMade
-            game_dict['threeThrowsAttempted'] = game.threePointersAttempted
+            game_dict['threePointersAttempted'] = game.threePointersAttempted
             game_dict['shots'] = json.loads(game.shots)
             player_dict['games'].append(game_dict)
 

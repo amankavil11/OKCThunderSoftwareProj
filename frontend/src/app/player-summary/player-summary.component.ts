@@ -90,7 +90,7 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.autoFocus = true;
     dialogConfig.data = {
-      date: games[0].date,
+      games: games,
     };
     const dialogRef = this.dialog.open(DialogComponent, dialogConfig);
   }

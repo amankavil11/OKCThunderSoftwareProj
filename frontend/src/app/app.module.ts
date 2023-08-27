@@ -6,7 +6,6 @@ import {NgModule} from '@angular/core';
 import {routing} from 'app/app.routing';
 import {AppComponent} from 'app/app.component';
 import {PlayersService} from 'app/_services/players.service';
-
 import {CommonModule} from '@angular/common';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -23,6 +22,9 @@ import {MatOptionModule} from '@angular/material/core';
 import {MatTabsModule} from '@angular/material/tabs';
 import { DialogComponent } from './dialog/dialog.component';
 import { MatTableModule } from '@angular/material/table';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { MatTableModule } from '@angular/material/table';
     MatOptionModule,
     MatTabsModule,
     MatTableModule,
+    MatSlideToggleModule,
+    FormsModule,
     routing
   ],
   providers: [PlayersService],

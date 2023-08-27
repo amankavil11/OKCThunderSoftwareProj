@@ -1,7 +1,3 @@
-<!-- <div class="placeholder">
-    {{apiResponse}}
-</div> -->
-
 <mat-form-field appearance="fill" class="filter">
   <mat-label>Search</mat-label>
   <input matInput (keyup)="applyFilter($event)" placeholder="Search by ID or Name" #input>
@@ -22,10 +18,10 @@
       </ng-container>
 
 
-      <ng-container matColumnDef="GameStats">
+      <ng-container matColumnDef="games">
         <th mat-header-cell *matHeaderCellDef></th>
-        <td mat-cell *matCellDef="let element">  
-            <button mat-stroked-button color="primary">Stats</button>
+        <td mat-cell *matCellDef="let row">  
+            <button mat-stroked-button color="primary" (click)="openDialog(row.games)">Stats</button>
         </td>
       </ng-container>
   

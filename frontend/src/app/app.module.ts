@@ -21,10 +21,13 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSelectModule} from '@angular/material/select';
 import {MatOptionModule} from '@angular/material/core';
 import {MatTabsModule} from '@angular/material/tabs';
+import { DialogComponent } from './dialog/dialog.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,7 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatSelectModule,
     MatOptionModule,
     MatTabsModule,
+    MatTableModule,
     routing
   ],
   providers: [PlayersService],

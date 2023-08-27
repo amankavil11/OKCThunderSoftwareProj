@@ -11,6 +11,8 @@ import {PlayersService} from '../_services/players.service';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator'
 import {MatSort} from '@angular/material/sort'
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { DialogComponent } from 'app/dialog/dialog.component';
 
 
 
@@ -55,11 +57,12 @@ export interface PlayerGames {
 })
 
 
+
 export class PlayerSummaryComponent implements OnInit, OnDestroy {
 
   apiResponse: any[] = [];
   playerID: number;
-  displayedColumns: string [] = ["id","name", "GameStats"]
+  displayedColumns: string [] = ["id","name", "games"]
   public dataSource: MatTableDataSource<PlayerGames>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -70,7 +73,8 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
   constructor(
     protected activatedRoute: ActivatedRoute,
     protected cdr: ChangeDetectorRef,
-    protected playersService: PlayersService,
+    protected playersService: PlayersService, 
+    private dialog: MatDialog
   ) {
 
   }
@@ -79,6 +83,16 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
     for (let i = 1; i < 32; i++) {
       this.fetchApiResponse(i);
     }
+  }
+
+
+  openDialog(games) {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.autoFocus = true;
+    dialogConfig.data = {
+      date: games[0].date,
+    };
+    const dialogRef = this.dialog.open(DialogComponent, dialogConfig);
   }
 
   applyFilter(event: Event) {
@@ -103,7 +117,6 @@ export class PlayerSummaryComponent implements OnInit, OnDestroy {
       this.sort.active = 'id';
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;
-      
     });
   }
 

@@ -97,13 +97,13 @@
 </div>
 <div *ngIf="isChecked" class="panel-container">
     <mat-accordion>
-        <mat-expansion-panel *ngFor="let game of games">
+        <mat-expansion-panel *ngFor="let game of gameShots">
             <mat-expansion-panel-header>
             <mat-panel-title>
                 {{game.date}}
             </mat-panel-title>
             </mat-expansion-panel-header>
-            <table mat-table [dataSource]="dataSource2">
+            <table mat-table [dataSource]="game.dSource">
                 
                 <ng-container matColumnDef="isMake">
                     <th mat-header-cell *matHeaderCellDef> Made </th>

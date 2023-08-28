@@ -15,7 +15,7 @@ export interface GameShots {
 export class DialogComponent implements OnInit {
   games: any;
   isChecked = false;
-  gameShots: GameShots[] = []
+  gameShots: any[] = []
   public dataSource: MatTableDataSource<Object>;
   public dataSource2: MatTableDataSource<Object>;
   displayedColumns: string [] = ["date", "isStarter", "points", "assists",
@@ -33,11 +33,11 @@ export class DialogComponent implements OnInit {
     this.games = data.games
     this.dataSource = new MatTableDataSource<Object>(this.games)
 
-    for (let game of this.games) {
-      const element = {date: game.date,shots: game.shots}
-      this.gameShots.push(element)
+    for (let [i,Game] of this.games.entries()) {
+      let gameShotsDSource = new MatTableDataSource<Object>(Game.shots)
+      this.gameShots[i] = {date: Game.date, dSource: gameShotsDSource}
     }
-    this.dataSource2 = new MatTableDataSource<Object>(this.gameShots[0].shots)
+
   }
 
   ngOnInit(): void {

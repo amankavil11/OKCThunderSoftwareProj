@@ -1,6 +1,6 @@
 .mat-table {
     // overflow-x: scroll;
-    overflow-y: scroll;
+    // overflow-y: scroll;
     max-width: 99%;
   }
   
@@ -23,9 +23,9 @@
   }
   
 
-  mat-expansion-panel {
+  .panel-container {
     max-height: 500px;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   #icon {

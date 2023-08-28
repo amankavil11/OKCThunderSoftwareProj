@@ -24,6 +24,9 @@ import { DialogComponent } from './dialog/dialog.component';
 import { MatTableModule } from '@angular/material/table';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
+import {MatExpansionModule} from '@angular/material/expansion';
+
+
 
 
 @NgModule({
@@ -52,6 +55,7 @@ import { FormsModule } from '@angular/forms';
     MatTableModule,
     MatSlideToggleModule,
     FormsModule,
+    MatExpansionModule,
     routing
   ],
   providers: [PlayersService],

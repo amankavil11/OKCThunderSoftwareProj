@@ -1,4 +1,6 @@
-<h2>Game Logs</h2>
+<h2 *ngIf="!isChecked">Game Logs</h2>
+<h2 *ngIf="isChecked">Shot Logs</h2>
+
 <mat-slide-toggle color="primary" [(ngModel)]="isChecked">{{((isChecked)) ? 'Switch To Game Stats' : 'Switch To Advanced Shooting Stats'}}</mat-slide-toggle>
 <div *ngIf="!isChecked">
     <table mat-table [dataSource]="dataSource">
@@ -89,13 +91,41 @@
         </ng-container>
 
 
-
-
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
 </div>
-<div *ngIf="isChecked">
-    <p>this worked</p>
+<div *ngIf="isChecked" class="panel-container">
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let game of games">
+            <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{game.date}}
+            </mat-panel-title>
+            </mat-expansion-panel-header>
+            <table mat-table [dataSource]="dataSource2">
+                
+                <ng-container matColumnDef="isMake">
+                    <th mat-header-cell *matHeaderCellDef> Made </th>
+                    <td mat-cell *matCellDef="let row">
+                        <mat-icon id="icon" [ngStyle]="{'color':row.isMake ? 'green' : 'red' }">{{((row.isMake))  ? "check_circle" : "clear"}}</mat-icon>
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="locationX">
+                    <th mat-header-cell *matHeaderCellDef> locX (ft) </th>
+                    <td mat-cell *matCellDef="let row"> {{row.locationX}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="locationY">
+                    <th mat-header-cell *matHeaderCellDef> locY (ft) </th>
+                    <td *matCellDef="let row"> {{row.locationY}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+            </table>
+        </mat-expansion-panel>
+    </mat-accordion>
 
 </div>

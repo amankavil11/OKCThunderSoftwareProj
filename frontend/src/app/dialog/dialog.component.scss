@@ -1,5 +1,5 @@
 .mat-table {
-    overflow-x: scroll;
+    // overflow-x: scroll;
     overflow-y: scroll;
     max-width: 99%;
   }
@@ -21,4 +21,17 @@
   .mat-header-row {
     display: table-row;
   }
+  
 
+  mat-expansion-panel {
+    max-height: 500px;
+    overflow-y: scroll;
+  }
+
+  #icon {
+    vertical-align:text-bottom;
+    padding: 0px;
+    justify-content: center;
+    transform: scale(0.8);
+    color: green;
+  }

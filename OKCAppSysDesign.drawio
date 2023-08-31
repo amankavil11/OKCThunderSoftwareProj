@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-08-31T23:01:52.216Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="i6kX8iuTbwbvb74NC7hy" version="21.7.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-08-31T23:07:53.694Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="1Gt_d4dVeGSBsHCMK5g0" version="21.7.1" type="github">
   <diagram name="Page-1" id="f31GO60zSbWaj2c_SM3a">
     <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -91,12 +91,27 @@
         <mxCell id="qmOTdylYtFEnlgB8g2Zc-44" value="cron scheduler" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="470" y="540" width="70" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="qmOTdylYtFEnlgB8g2Zc-45" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.queue;fillColor=#D9A741;gradientColor=none;direction=west;" vertex="1" parent="1">
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-45" value="Redis Message&lt;br&gt;&amp;nbsp;Queue" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.queue;fillColor=#D9A741;gradientColor=none;direction=west;" vertex="1" parent="1">
           <mxGeometry x="340" y="536" width="73.5" height="48" as="geometry" />
         </mxCell>
         <mxCell id="qmOTdylYtFEnlgB8g2Zc-46" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="qmOTdylYtFEnlgB8g2Zc-44" target="qmOTdylYtFEnlgB8g2Zc-45">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="400" y="420" as="sourcePoint" />
+            <mxPoint x="450" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-47" value="WebSockets&lt;br&gt;(Socket.IO)" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="160" y="520" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-48" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="qmOTdylYtFEnlgB8g2Zc-45" target="qmOTdylYtFEnlgB8g2Zc-47">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="420" as="sourcePoint" />
+            <mxPoint x="450" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-49" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.98;entryY=0.98;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="qmOTdylYtFEnlgB8g2Zc-47" target="qmOTdylYtFEnlgB8g2Zc-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="510" as="sourcePoint" />
             <mxPoint x="450" y="370" as="targetPoint" />
           </mxGeometry>
         </mxCell>

@@ -1,9 +1,105 @@
-<mxfile host="app.diagrams.net" modified="2023-08-31T22:07:57.254Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" version="21.7.1" etag="sQ2GlEeY6VgwtYf1PtdP" type="github">
+<mxfile host="app.diagrams.net" modified="2023-08-31T23:01:52.216Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="i6kX8iuTbwbvb74NC7hy" version="21.7.1" type="github">
   <diagram name="Page-1" id="f31GO60zSbWaj2c_SM3a">
-    <mxGraphModel>
+    <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-33" value="Distributed Redis&lt;br&gt;Cache&amp;nbsp;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cache_node;" vertex="1" parent="1">
+          <mxGeometry x="720" y="480" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-16" value="&lt;br&gt;&lt;br&gt;Users" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="270" width="50" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-17" value="Clients" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.laptop;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="300" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-18" value="NGINX HTTP Load Balancer &lt;br&gt;and Reverse Proxy" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.classic_load_balancer;fillColor=#F58534;gradientColor=none;direction=east;" vertex="1" parent="1">
+          <mxGeometry x="290" y="110" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-19" value="Score Update App&lt;br&gt;(Django/&lt;br&gt;Angular)" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="650" y="150" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-20" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Live Score Updater at Game&lt;/font&gt;" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+          <mxGeometry x="770" y="140" width="70" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-23" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="qmOTdylYtFEnlgB8g2Zc-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="710" y="220" as="sourcePoint" />
+            <mxPoint x="720" y="185" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-26" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Backend Django API&lt;br&gt;&lt;/font&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;horizontal=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="570" y="300" width="120" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-27" value="PostgreSQL&lt;br&gt;Database" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="325" width="70" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-28" value="Default Django Local Cache" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="597.5" y="380" width="65" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-31" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.025;exitY=0.921;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="qmOTdylYtFEnlgB8g2Zc-26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="420" as="sourcePoint" />
+            <mxPoint x="740" y="480" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="740" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-32" value="" style="endArrow=classic;html=1;rounded=0;entryX=1.017;entryY=0.843;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="qmOTdylYtFEnlgB8g2Zc-26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="750" y="480" as="sourcePoint" />
+            <mxPoint x="450" y="370" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="750" y="418" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-35" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.992;exitY=0.4;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="qmOTdylYtFEnlgB8g2Zc-26" target="qmOTdylYtFEnlgB8g2Zc-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="420" as="sourcePoint" />
+            <mxPoint x="450" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-38" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="qmOTdylYtFEnlgB8g2Zc-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="420" as="sourcePoint" />
+            <mxPoint x="790" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-39" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;SQL INSERT INTO&lt;br&gt;&amp;nbsp;or UPDATE Command&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="680" y="235" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-41" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=1.02;exitY=-0.167;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="qmOTdylYtFEnlgB8g2Zc-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="420" as="sourcePoint" />
+            <mxPoint x="280" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-42" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.033;entryY=0.386;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="qmOTdylYtFEnlgB8g2Zc-18" target="qmOTdylYtFEnlgB8g2Zc-26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="420" as="sourcePoint" />
+            <mxPoint x="450" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-43" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="qmOTdylYtFEnlgB8g2Zc-26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="420" as="sourcePoint" />
+            <mxPoint x="540" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-44" value="cron scheduler" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="540" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-45" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.queue;fillColor=#D9A741;gradientColor=none;direction=west;" vertex="1" parent="1">
+          <mxGeometry x="340" y="536" width="73.5" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="qmOTdylYtFEnlgB8g2Zc-46" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="qmOTdylYtFEnlgB8g2Zc-44" target="qmOTdylYtFEnlgB8g2Zc-45">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="420" as="sourcePoint" />
+            <mxPoint x="450" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
